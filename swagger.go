@@ -2,6 +2,7 @@ package httpSwagger
 
 import (
 	"html/template"
+	"log"
 	"net/http"
 	"regexp"
 
@@ -68,6 +69,7 @@ func Handler(configFns ...func(*Config)) http.HandlerFunc {
 	var re = regexp.MustCompile(`^(.*/)([^?].*)?[?|.]*$`)
 
 	return func(w http.ResponseWriter, r *http.Request) {
+		log.Println(r.RequestURI)
 		matches := re.FindStringSubmatch(r.RequestURI)
 		path := matches[2]
 		prefix := matches[1]
