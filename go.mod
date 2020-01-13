@@ -7,6 +7,5 @@ require (
 	github.com/gorilla/mux v1.7.3
 	github.com/stretchr/testify v1.3.0
 	github.com/swaggo/files v0.0.0-20190704085106-630677cd5c14
-	github.com/swaggo/http-swagger v0.0.0-20200103000832-0e9263c4b516
 	github.com/swaggo/swag v1.6.3
 )
